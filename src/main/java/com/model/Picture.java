@@ -3,8 +3,8 @@ package com.model;
 public class Picture {
     int id;
     String code;
-    double height;
-    double width;
+    int height;
+    int width;
     String material;
     String description;
     int price;
@@ -12,7 +12,7 @@ public class Picture {
     public Picture() {
     }
 
-    public Picture(int id, String code, double height, double width, String material, String description, int price) {
+    public Picture(int id, String code, int height, int width, String material, String description, int price) {
         this.id = id;
         this.code = code;
         this.height = height;
@@ -38,19 +38,19 @@ public class Picture {
         this.code = code;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
-    public double getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(int width) {
         this.width = width;
     }
 
@@ -76,5 +76,18 @@ public class Picture {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Picture{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", height=" + height +
+                ", width=" + width +
+                ", material='" + material + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

@@ -44,4 +44,9 @@ class PictureTest {
         assertEquals("normalize",pic2.getDescription());
         assertEquals(125,pic2.getPrice());
     }
+    @Test
+    void testToString(){
+        assertEquals("Picture{id=1, code='pic1', height=200.0, width=100.0, material='paper', description='normal', price=150}",pic1.toString());
+        assertEquals("Picture{id=2, code='pic2', height=100.0, width=50.0, material='paint', description='great', price=100}",pic2.toString());
+    }
 }
